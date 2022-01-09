@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var resultLabel: UILabel!
+    
     private var didFinishTyping = true
     private var resultValue: Double {
         get {
@@ -32,13 +33,11 @@ class ViewController: UIViewController {
         didFinishTyping = true
 
         if let calcMethod = sender.currentTitle {
-            if calcMethod == "+/-" {
-                resultValue *= -1
-            } else if calcMethod == "AC" {
-                resultLabel.text = "0"
-            } else if calcMethod == "%" {
-                resultValue /= 100
+            let calculatorLogic = CalculatorLogic(number: resultValue)
+            guard let result = calculatorLogic.calculate(symbol: calcMethod) else {
+                fatalError("Result of calculations is nil")
             }
+            resultValue = result
         }
     }
     
