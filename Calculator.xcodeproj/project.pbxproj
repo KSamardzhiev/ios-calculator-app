@@ -17,6 +17,7 @@
 		F81A80B62789EB1700858699 /* CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81A80B52789EB1700858699 /* CalculatorTests.swift */; };
 		F81A80C02789EB1700858699 /* CalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81A80BF2789EB1700858699 /* CalculatorUITests.swift */; };
 		F81A80C22789EB1700858699 /* CalculatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81A80C12789EB1700858699 /* CalculatorUITestsLaunchTests.swift */; };
+		F81A80D1278B6F4900858699 /* CalculatorLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81A80D0278B6F4900858699 /* CalculatorLogic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		F81A80BB2789EB1700858699 /* CalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F81A80BF2789EB1700858699 /* CalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorUITests.swift; sourceTree = "<group>"; };
 		F81A80C12789EB1700858699 /* CalculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F81A80D0278B6F4900858699 /* CalculatorLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorLogic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +105,9 @@
 			children = (
 				F81A809B2789EB1200858699 /* AppDelegate.swift */,
 				F81A809D2789EB1200858699 /* SceneDelegate.swift */,
-				F81A809F2789EB1200858699 /* ViewController.swift */,
-				F81A80A12789EB1200858699 /* Main.storyboard */,
+				F81A80D2278B6F5000858699 /* Model */,
+				F81A80CF278B6F3000858699 /* View */,
+				F81A80CE278B6F2700858699 /* Controller */,
 				F81A80A72789EB1600858699 /* Assets.xcassets */,
 				F81A80A92789EB1600858699 /* LaunchScreen.storyboard */,
 				F81A80AC2789EB1600858699 /* Info.plist */,
@@ -128,6 +131,30 @@
 				F81A80C12789EB1700858699 /* CalculatorUITestsLaunchTests.swift */,
 			);
 			path = CalculatorUITests;
+			sourceTree = "<group>";
+		};
+		F81A80CE278B6F2700858699 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F81A809F2789EB1200858699 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F81A80CF278B6F3000858699 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F81A80A12789EB1200858699 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F81A80D2278B6F5000858699 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F81A80D0278B6F4900858699 /* CalculatorLogic.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +290,7 @@
 			files = (
 				F81A80A02789EB1200858699 /* ViewController.swift in Sources */,
 				F81A80A62789EB1300858699 /* Calculator.xcdatamodeld in Sources */,
+				F81A80D1278B6F4900858699 /* CalculatorLogic.swift in Sources */,
 				F81A809C2789EB1200858699 /* AppDelegate.swift in Sources */,
 				F81A809E2789EB1200858699 /* SceneDelegate.swift in Sources */,
 			);
