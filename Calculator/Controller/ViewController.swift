@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var resultLabel: UILabel!
+    private var calculatorLogic = CalculatorLogic()
     
     private var didFinishTyping = true
     private var resultValue: Double {
@@ -33,7 +34,7 @@ class ViewController: UIViewController {
         didFinishTyping = true
 
         if let calcMethod = sender.currentTitle {
-            let calculatorLogic = CalculatorLogic(number: resultValue)
+            calculatorLogic.setNumber(resultValue)
             guard let result = calculatorLogic.calculate(symbol: calcMethod) else {
                 fatalError("Result of calculations is nil")
             }
