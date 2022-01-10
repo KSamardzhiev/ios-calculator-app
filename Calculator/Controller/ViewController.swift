@@ -32,13 +32,12 @@ class ViewController: UIViewController {
 
     @IBAction func operationPressed(_ sender: UIButton) {
         didFinishTyping = true
+        calculatorLogic.setNumber(resultValue)
 
         if let calcMethod = sender.currentTitle {
-            calculatorLogic.setNumber(resultValue)
-            guard let result = calculatorLogic.calculate(symbol: calcMethod) else {
-                fatalError("Result of calculations is nil")
+            if let result = calculatorLogic.calculate(symbol: calcMethod) {
+                resultValue = result
             }
-            resultValue = result
         }
     }
     
